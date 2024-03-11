@@ -1,0 +1,77 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThankYou</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Varela+Round&display=swap" rel="stylesheet">
+<style>
+    body {
+  font-family: "Varela Round", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-style: italic;
+  
+}
+
+</style>
+<body>
+    <div class="tinder">
+        <div class="tinder--status">
+            <i class="fa fa-remove"></i>
+            <i class="fa fa-heart"></i>
+        </div>
+
+        <div class="tinder--cards" >
+            <div class="tinder--card" style="background-color: rgb(77, 91, 237); color: white;">
+                <h3>Slide to continue ✨✨</h3>
+            </div>
+            
+    </div>
+    <script src="script.js"></script>
+    <script src="index.js"></script>
+    
+    <script>
+        function getRandomDarkColor() {
+          // Generate random values for RGB (Red, Green, Blue)
+          var red = Math.floor(Math.random() * 100);
+          var green = Math.floor(Math.random() * 100);
+          var blue = Math.floor(Math.random() * 100);
+    
+          // Convert RGB values to hexadecimal and concatenate them
+          var color = "#" +
+            red.toString(16).padStart(2, '0') +
+            green.toString(16).padStart(2, '0') +
+            blue.toString(16).padStart(2, '0');
+    
+          return color;
+        }
+    
+        function changeFontColorForH3() {
+          // Get all h3 elements inside the body
+          var h3Elements = document.querySelectorAll('body h3');
+    
+          // Loop through each h3 element and change the font color
+          h3Elements.forEach(function (h3) {
+            // Get a random dark color
+            var randomColor = getRandomDarkColor();
+    
+            // Set the font color to the random dark color
+            h3.style.color = randomColor;
+          });
+        }
+    
+        // Initial call to change font color for h3 elements
+        changeFontColorForH3();
+    
+        // Set interval to change font color every 5 seconds
+        setInterval(changeFontColorForH3, 5000);
+      </script>
+</body>
+
+</html>
